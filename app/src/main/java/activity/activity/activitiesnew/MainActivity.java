@@ -15,8 +15,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         camera=findViewById(R.id.camera);
+        auth=findViewById(R.id.auth);
+
 
         camera.setOnClickListener(this);
+        auth.setOnClickListener(this);
 
     }
 
@@ -26,6 +29,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.camera:
                 Intent camera=new Intent(this,Camera.class);
                 startActivity(camera);
+                break;
+            case R.id.auth:
+                Intent auth=new Intent(this,Authentication.class);
+                startActivity(auth);
                 break;
         }
     }
